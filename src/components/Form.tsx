@@ -1,24 +1,25 @@
-import React from "react";
+
 
 const Form = () => {
   return (
-    <form>
-      <div>
-        <label>Nome</label>
-        <input type="text" placeholder="Digite seu nome" />
+    <form className="flex flex-col  gap-3">
+      <div className="flex flex-col">
+        <label className="text-sm" htmlFor="name">Nome</label>
+        <input type="text" placeholder="Digite seu nome" className="rounded-lg py-2 px-2 text-sm placeholder:text-stone-400"/>
       </div>
-      <div>
-        <label>E-mail</label>
-        <input type="email" placeholder="Insira seu e-mail" />
+      <div className="flex flex-col">
+        <label className="text-sm" htmlFor="email">E-mail</label>
+        <input type="email" placeholder="Insira seu e-mail" className="rounded-lg py-2 px-2 text-sm placeholder:text-stone-400" />
       </div>
-      <div>
-        <a href="#">Leia os Termos</a>
-        <div>
+      <div className="flex flex-col">
+        <a href="#" className="text-xs underline mb-2 ">Leia os Termos</a>
+        <div className="flex gap-2 items-center">
             <input type="checkbox"  />
-            <label>Concordo com os Termos</label>
+            <label className="text-sm" htmlFor="agree">Concordo com os Termos</label>
           
         </div>
       </div>
+      <button type="submit" className="bg-slate-600 hover:bg-slate-500 font-medium text-sm py-2 px-4 rounded-lg text-white">Cadastrar</button>
     </form>
   );
 };

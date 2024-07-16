@@ -1,8 +1,20 @@
 
+import { useState,FormEvent } from "react";
+import { User } from "../types/User";
 
 const Form = () => {
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [agree, setAgree] = useState(false);
+
+    const handleSubmit = (e: FormEvent) => {
+        e.preventDefault();
+        alert("Formulário enviado com sucesso! aos 28:04 do video");        
+    }
+
+
   return (
-    <form className="flex flex-col  gap-3">
+    <form className="flex flex-col  gap-3" onSubmit={handleSubmit}>
       <div className="flex flex-col">
         <label className="text-sm" htmlFor="name">Nome</label>
         <input type="text" placeholder="Digite seu nome" className="rounded-lg py-2 px-2 text-sm placeholder:text-stone-400"/>
